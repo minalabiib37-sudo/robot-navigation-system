@@ -3,36 +3,32 @@ Autonomous Robot Navigation System
 Author: Mina Labib
 """
 
-import time
+from path_planning import AStarPlanner
+from simulator import Simulator
 
-class Robot:
+def main():
+    grid = [
+        [0, 0, 0, 0, 0],
+        [0, 1, 1, 1, 0],
+        [0, 0, 0, 1, 0],
+        [0, 1, 0, 0, 0],
+        [0, 0, 0, 1, 0],
+    ]
 
-    def __init__(self):
-        self.position = (0, 0)
+    start = (0, 0)
+    goal = (4, 4)
 
-    def detect_obstacle(self):
-        print("Scanning for obstacles...")
-        time.sleep(1)
-        return False
+    planner = AStarPlanner(grid)
+    path = planner.find_path(start, goal)
 
-    def plan_path(self):
-        print("Planning optimal path...")
-        time.sleep(1)
+    print("=== Autonomous Robot Navigation System ===")
+    print("Start:", start)
+    print("Goal:", goal)
+    print("Path:", path)
+    print("\nGrid Visualization:\n")
 
-    def move(self):
-        print("Robot moving forward...")
-        self.position = (self.position[0] + 1, self.position[1])
+    simulator = Simulator(grid, path)
+    simulator.display()
 
-robot = Robot()
-
-print("=== Autonomous Navigation Started ===")
-
-for i in range(5):
-
-    if robot.detect_obstacle():
-        print("Obstacle detected!")
-        robot.plan_path()
-
-    robot.move()
-
-print("Destination reached.")
+if __name__ == "__main__":
+    main()
