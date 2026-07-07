@@ -1,0 +1,17 @@
+"""
+Project configuration settings.
+"""
+
+GRID_WIDTH = 20
+GRID_HEIGHT = 20
+
+START_POSITION = (0, 0)
+GOAL_POSITION = (18, 18)
+
+ROBOT_SPEED = 1.0
+
+OBSTACLE_COUNT = 30
+
+ENABLE_VISUALIZATION = True
+
+RANDOM_SEED = 42
