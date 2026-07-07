@@ -16,7 +16,10 @@ The objective was to design and implement an autonomous mobile robot capable of 
 - Embedded system integration
 - Real-time sensor processing
 - AI-assisted decision making
-
+- A* path planning algorithm
+- Grid-based simulation
+- Text-based path visualization
+- Start and goal position tracking
 ---
 
 ## Technologies
@@ -51,3 +54,23 @@ The objective was to design and implement an autonomous mobile robot capable of 
 - Computer Vision
 - Artificial Intelligence
 - Algorithm Development
+
+  ---
+
+## 🚀 Project Roadmap
+
+- [x] Create project structure
+- [x] Implement A* path planning
+- [x] Create grid-based simulator
+- [x] Add modular project architecture
+- [ ] Add random obstacle generation
+- [ ] Add robot movement animation
+- [ ] Add OpenCV obstacle detection
+- [ ] Add graphical interface
+- [ ] Add unit tests
+- [ ] Add performance metrics
+---
+
+## 📅 Current Status
+
+This project is actively under development as part of my software engineering portfolio. Future updates will include visualization, obstacle avoidance, and advanced autonomous navigation features.
